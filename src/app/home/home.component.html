@@ -1,0 +1,25 @@
+    <button type="button" class="btn btn-info" (click)="logOut()">Log out</button>
+
+<div class="container">
+    <div class="page-header">
+        <h1> Welcome: {{current}}</h1>
+    </div>
+</div>
+
+
+<!--<div class="card">
+  <img src="https://www.clickdesk.com/assets/images/press/clickdesk-chat-bubbles-different-formats.png.pagespeed.ce.FCjjoyGLBF.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Jane Doe</b></h4> 
+    <p>Interior Designer</p> 
+  </div>
+</div>-->
+
+<div class="card" *ngFor="let item of users; let i = index">
+  <img src="http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/User-Chat-icon.png" alt="Avatar" style="width:80%">
+  <div class="container2">
+    <h4><b>{{item.FirstName}} {{item.LastName}}</b></h4> 
+    <p>{{item.Email}}</p> 
+  </div>
+  <button type="button" class="btn btn-success" (click)="go(item,i)">Chat</button>
+</div>

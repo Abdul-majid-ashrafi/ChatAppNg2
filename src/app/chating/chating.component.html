@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Chat</h1>
+    </div>
+</div>
+
+<br/>
+<ul class="list-group">
+    <!--*ngIf="getKey === 'qzUuEmtZ17bZfuvk0J7NImaw4w72'"-->
+    <li class="list-group-item" *ngFor="let item of chats;let i = index;">
+        {{item.chat}}
+        <br>
+        <b *ngIf="item.img">
+       <img [src]="item.img" alt="" width="100" height="100">
+       </b>
+    </li>
+</ul>
+
+<ul class="list-group">
+    <!--*ngIf="getKey === 'qzUuEmtZ17bZfuvk0J7NImaw4w72'"-->
+    <li class="list-group-item" *ngFor="let item of chat2;let i = index;">
+        {{item.chat}}
+        <br>
+        <b *ngIf="item.img">
+       <img [src]="item.img" alt="" width="100" height="100">
+       </b>
+    </li>
+</ul>
+<form action="" id="loginForm">
+    <div class="form-group">
+        <label for="pwd">Write Something:</label>
+        <input type="text" class="form-control" #msg id="pwd">
+    </div>
+    <button type="submit" class="btn btn-success" (click)='send(msg.value)'>Send</button>
+</form>
+
+<input type="file" id="userUploadedFile" (change)="upload()">

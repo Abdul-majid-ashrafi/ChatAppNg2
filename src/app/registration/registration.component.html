@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Registeration</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-6 col-md-4">
+        <form action="" id="loginForm" [formGroup]="myForm">
+            <div class="form-group input-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" type="text" name='FirstName' [formControl]="myForm.controls['FirstName']" placeholder="First Name"
+                />
+            </div>
+
+            <div class="form-group input-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" type="text" name='LastName' [formControl]="myForm.controls['LastName']" placeholder="Last Name"
+                />
+            </div>
+
+            <div class="form-group input-group">
+                <span class="input-group-addon"> </span>
+                <input class="form-control" type="email" [formControl]="myForm.controls['Email']" name='Email' placeholder="Email" />
+            </div>
+
+            <div class="form-group input-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" type="password" name='Password' [formControl]="myForm.controls['Password']" placeholder="Password"
+                />
+            </div>
+
+            <div class="form-group input-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" type="number" name='Age' [formControl]="myForm.controls['Age']" placeholder="Age" />
+            </div>
+
+            <div class="form-group input-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" type="number" name='Phone' [formControl]="myForm.controls['Phone']" placeholder="Phone" />
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-info btn-block" (click)="signUp(myForm.value)">Submit</button>
+            </div>
+        </form>
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+    </div>
+</div>
